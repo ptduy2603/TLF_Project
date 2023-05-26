@@ -15,42 +15,45 @@
 
 <body class="">
     <!-- Default page is not-logined page -->
-    <div id="main-frame">
-        <div id="header">
-            <img id="header-logo" src="./assets/images/favicon.png" alt="TLF">
-            <h3 id="header-title">Phòng khám TLF</h3>
-            <button id="header-chat-btn">Nhắn tin</button>
-            <button 
-            <!-- id="header-login-btn" -->
-             class="btn btn-primary">Đăng nhập</button>
-        </div>
-
-        <div id="navbar" class="col-2">
-            <ul id="navbar-list">
-                <a href="#">
-                    <li>Thông tin phòng khám</li>
-                </a>
-                <a href="#">
-                    <li>Thông tin bác sĩ</li>
-                </a>
-                <a href="#">
-                    <li>Hướng dẫn</li>
-                </a>
-            </ul>
-            <div id="contact">
-                Liên hệ:<br>
-                <a href="https://facebook.com">Facebook</a>
-                <a href="https://instagram.com">Instagram</a>
+    <div id="Header">
+        <div class="MainFrame">
+            <div class="col">
+                <img id="Header--Logo" src="./assets/images/favicon.png" alt="TLF">
+                <h5 id="Header--Title">Phòng khám TLF</h5>
+            </div>
+            <div class="col-9">
+                <button class="btn btn-primary">Nhắn tin</button>
+                <button class="btn btn-primary">Đăng nhập</button>
             </div>
         </div>
+    </div>
 
-        <div id="content" class="col-10">
+    <div id="Body">
+        <div class="MainFrame">
+            <div class="col-2">
+                <ul class="nav flex-column">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Thông tin phòng khám</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Thông tin bác sĩ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hướng dẫn</a>
+                    </li>
+                </ul>
 
+                <div id="Contact">
+                    Liên hệ:<br>
+                    <a href="https://facebook.com">Facebook</a><br>
+                    <a href="https://instagram.com">Instagram</a>
+                </div>
+            </div>
+
+            <div class="col-10">
+
+            </div>
         </div>
-        <!-- <div id="footer">
-            This is footer
-        </div> -->
-
     </div>
     <script src="./javascript/main.js"></script>
 </body>
