@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phòng Khám TLF</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/patient_logined_page.css">
+    <link rel="stylesheet" href="../css/doctor_logined_page.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="main">
+        <!-- header -->
+        <header id="header">
+            <div class="header__left-section">
+                <a href="#"><img src="../assets/images/favicon.png" alt="TLF Logo" id="header-logo"
+                        class="header__logo"></a>
+                <h1 class="header__title" id="header-title">Phòng Khám TLF</h1>
+            </div>
+            <div class="header__right-section">
+                <button class="header__create-record-btn btn">Tạo hồ sơ mới</button>
+                <button id="header-chat-btn" class="btn">Nhắn tin</button>
+                <div class="header__notification">
+                    <i class="fa-regular fa-bell header__icon"></i>
+                    Thông báo
+                    <ul id="notification-box">
+                        <li class="notification-item">Bạn cần đi uống thuốc lúc 6h</li>
+                        <li class="notification-item">Bạn cần đi uống thuốc lúc 10h</li>
+                        <li class="notification-item">Bạn cần đi uống thuốc lúc 12h</li>
+                    </ul>
+                </div>
+                <div class="header__user">
+                    <img src="../assets/images/default_men_avatar.jpg" alt="User Avatar" class="header__user-avatar">
+                    <span class="header__user-name">Nguyễn Văn B</span>
+                    <ul class="header__user-box">
+                        <li class="header__user-item"><a href="#">Thông tin tài khoản</a></li>
+                        <li class="header__user-item"><a href="#">Đổi mật khẩu</a></li>
+                        <li class="header__user-item"><a href="#">Đăng xuất</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- navbar -->
+        <div id="navbar">
+            <ul id="navbar-list">
+                <a href="#">
+                    <li>Hồ sơ bệnh án</li>
+                </a>
+                <a href="#">
+                    <li>Lịch khám bệnh</li>
+                </a>
+            </ul>
+            <div id="contact">
+                Đường dây nóng đến phòng khám<br>
+                <div class="contact__phone">
+                    <i class="fa-sharp fa-solid fa-phone"></i>
+                    <span class="contact__phone-number">0123456789</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- content -->
+        <div id="content">
+            <div class="section" id="prescription-section">
+                <h3 class="section__heading">Hồ sơ bệnh án:</h3>
+                <div class="prescription-container">
+                    <div class="prescription-item">
+                        <img src="../assets/images/default_men_avatar.jpg" alt="Patient Avatar" class="prescription__img">
+                        <div class="prescription__info">
+                            <div>
+                                Họ tên:  <span class="prescription__info-name">Nguyễn Văn B</span>                                
+                           </div>
+                            <div>
+                                Chẩn đoán:  <span class="prescription__info-name">Ho, sốt</span>
+                            </div>
+                            <div>
+                                Lần khám gần nhất:  <span class="prescription__info-name">27/5/2023</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="prescription-item">
+                        <img src="../assets/images/default_men_avatar.jpg" alt="Patient Avatar" class="prescription__img">
+                        <div class="prescription__info">
+                            <div>
+                                Họ tên:  <span class="prescription__info-name"></span>                                
+                           </div>
+                            <div>
+                                Chẩn đoán:  <span class="prescription__info-name"></span>
+                            </div>
+                            <div>
+                                Lần khám gần nhất:  <span class="prescription__info-name"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="prescription-item">
+                        <img src="../assets/images/default_men_avatar.jpg" alt="Patient Avatar" class="prescription__img">
+                        <div class="prescription__info">
+                            <div>
+                                Họ tên:  <span class="prescription__info-name"></span>                                
+                           </div>
+                            <div>
+                                Chẩn đoán:  <span class="prescription__info-name"></span>
+                            </div>
+                            <div>
+                                Lần khám gần nhất:  <span class="prescription__info-name"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="prescription-item">
+                        <img src="../assets/images/default_men_avatar.jpg" alt="Patient Avatar" class="prescription__img">
+                        <div class="prescription__info">
+                            <div>
+                                Họ tên:  <span class="prescription__info-name"></span>                                
+                           </div>
+                            <div>
+                                Chẩn đoán:  <span class="prescription__info-name"></span>
+                            </div>
+                            <div>
+                                Lần khám gần nhất:  <span class="prescription__info-name"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="prescription-item">
+                        <img src="../assets/images/default_men_avatar.jpg" alt="Patient Avatar" class="prescription__img">
+                        <div class="prescription__info">
+                            <div>
+                                Họ tên:  <span class="prescription__info-name"></span>                                
+                           </div>
+                            <div>
+                                Chẩn đoán:  <span class="prescription__info-name"></span>
+                            </div>
+                            <div>
+                                Lần khám gần nhất:  <span class="prescription__info-name"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="prescription-item">
+                        <img src="../assets/images/default_men_avatar.jpg" alt="Patient Avatar" class="prescription__img">
+                        <div class="prescription__info">
+                            <div>
+                                Họ tên:  <span class="prescription__info-name"></span>                                
+                           </div>
+                            <div>
+                                Chẩn đoán:  <span class="prescription__info-name"></span>
+                            </div>
+                            <div>
+                                Lần khám gần nhất:  <span class="prescription__info-name"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="view-more-btn btn">Xem thêm</button>
+                </div>
+            </div>
+
+            <div class="section" id="schedule-section">
+                <h3 class="section__heading">Lịch khám bệnh:</h3>
+                <div class="schedule-container">
+                    <div class="schedule__table">
+                        <input type="date">
+                    </div>         
+                    <div class="schedule__detail">
+                        <h4>Ngày: <span class="schedule__date">27/5/2023</span></h4>
+                        <div class="schedul-item">
+                            <div>
+                                Họ và tên: <span>Nguyễn Văn B</span>
+                            </div>
+                            <div>
+                                Thời gian khám: <samp></samp>
+                            </div>
+                            <div>
+                                Triệu chứng: <span></span>
+                            </div>
+                        </div>
+                        
+                        <div class="schedul-item">
+                            <div>
+                                Họ và tên: <span>Nguyễn Văn B</span>
+                            </div>
+                            <div>
+                                Thời gian khám: <samp></samp>
+                            </div>
+                            <div>
+                                Triệu chứng: <span></span>
+                            </div>
+                        </div>
+
+                        <div class="schedul-item">
+                            <div>
+                                Họ và tên: <span>Nguyễn Văn B</span>
+                            </div>
+                            <div>
+                                Thời gian khám: <samp></samp>
+                            </div>
+                            <div>
+                                Triệu chứng: <span></span>
+                            </div>
+                        </div>
+
+                        <div class="schedul-item">
+                            <div>
+                                Họ và tên: <span>Nguyễn Văn B</span>
+                            </div>
+                            <div>
+                                Thời gian khám: <samp></samp>
+                            </div>
+                            <div>
+                                Triệu chứng: <span></span>
+                            </div>
+                        </div>
+
+                        <div class="schedul-item">
+                            <div>
+                                Họ và tên: <span>Nguyễn Văn B</span>
+                            </div>
+                            <div>
+                                Thời gian khám: <samp></samp>
+                            </div>
+                            <div>
+                                Triệu chứng: <span></span>
+                            </div>
+                        </div>
+                    </div>           
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal">
+        <div class="modal__content">
+            <div class="modal__prescription">
+                <div class="modal__prescription-header">
+                    <h4 class="modal__heading">Danh sách hồ sơ bệnh án:</h4>
+                    <i class="fa-solid fa-xmark modal__close-icon"></i>
+                </div>
+
+                <div class="prescription-list">
+                    <div class="prescription-item">
+                        <img src="../assets/images/default_men_avatar.jpg" alt="Patient Avatar" class="prescription__img">
+                        <div class="prescription__info">
+                            <div>
+                                Họ tên:  <span class="prescription__info-name">Nguyễn Văn B</span>                                
+                           </div>
+                            <div>
+                                Chẩn đoán:  <span class="prescription__info-name">Ho, sốt</span>
+                            </div>
+                            <div>
+                                Lần khám gần nhất:  <span class="prescription__info-name">27/5/2023</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="prescription-item">
+                        <img src="../assets/images/default_men_avatar.jpg" alt="Patient Avatar" class="prescription__img">
+                        <div class="prescription__info">
+                            <div>
+                                Họ tên:  <span class="prescription__info-name">Nguyễn Văn B</span>                                
+                           </div>
+                            <div>
+                                Chẩn đoán:  <span class="prescription__info-name">Ho, sốt</span>
+                            </div>
+                            <div>
+                                Lần khám gần nhất:  <span class="prescription__info-name">27/5/2023</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="prescription-item">
+                        <img src="../assets/images/default_men_avatar.jpg" alt="Patient Avatar" class="prescription__img">
+                        <div class="prescription__info">
+                            <div>
+                                Họ tên:  <span class="prescription__info-name">Nguyễn Văn B</span>                                
+                           </div>
+                            <div>
+                                Chẩn đoán:  <span class="prescription__info-name">Ho, sốt</span>
+                            </div>
+                            <div>
+                                Lần khám gần nhất:  <span class="prescription__info-name">27/5/2023</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="prescription-item">
+                        <img src="../assets/images/default_men_avatar.jpg" alt="Patient Avatar" class="prescription__img">
+                        <div class="prescription__info">
+                            <div>
+                                Họ tên:  <span class="prescription__info-name">Nguyễn Văn B</span>                                
+                           </div>
+                            <div>
+                                Chẩn đoán:  <span class="prescription__info-name">Ho, sốt</span>
+                            </div>
+                            <div>
+                                Lần khám gần nhất:  <span class="prescription__info-name">27/5/2023</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="prescription-item">
+                        <img src="../assets/images/default_men_avatar.jpg" alt="Patient Avatar" class="prescription__img">
+                        <div class="prescription__info">
+                            <div>
+                                Họ tên:  <span class="prescription__info-name">Nguyễn Văn B</span>                                
+                           </div>
+                            <div>
+                                Chẩn đoán:  <span class="prescription__info-name">Ho, sốt</span>
+                            </div>
+                            <div>
+                                Lần khám gần nhất:  <span class="prescription__info-name">27/5/2023</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="prescription-item">
+                        <img src="../assets/images/default_men_avatar.jpg" alt="Patient Avatar" class="prescription__img">
+                        <div class="prescription__info">
+                            <div>
+                                Họ tên:  <span class="prescription__info-name">Nguyễn Văn B</span>                                
+                           </div>
+                            <div>
+                                Chẩn đoán:  <span class="prescription__info-name">Ho, sốt</span>
+                            </div>
+                            <div>
+                                Lần khám gần nhất:  <span class="prescription__info-name">27/5/2023</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="prescription-item">
+                        <img src="../assets/images/default_men_avatar.jpg" alt="Patient Avatar" class="prescription__img">
+                        <div class="prescription__info">
+                            <div>
+                                Họ tên:  <span class="prescription__info-name">Nguyễn Văn B</span>                                
+                           </div>
+                            <div>
+                                Chẩn đoán:  <span class="prescription__info-name">Ho, sốt</span>
+                            </div>
+                            <div>
+                                Lần khám gần nhất:  <span class="prescription__info-name">27/5/2023</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="prescription-item">
+                        <img src="../assets/images/default_men_avatar.jpg" alt="Patient Avatar" class="prescription__img">
+                        <div class="prescription__info">
+                            <div>
+                                Họ tên:  <span class="prescription__info-name">Nguyễn Văn B</span>                                
+                           </div>
+                            <div>
+                                Chẩn đoán:  <span class="prescription__info-name">Ho, sốt</span>
+                            </div>
+                            <div>
+                                Lần khám gần nhất:  <span class="prescription__info-name">27/5/2023</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="prescription-item">
+                        <img src="../assets/images/default_men_avatar.jpg" alt="Patient Avatar" class="prescription__img">
+                        <div class="prescription__info">
+                            <div>
+                                Họ tên:  <span class="prescription__info-name">Nguyễn Văn B</span>                                
+                           </div>
+                            <div>
+                                Chẩn đoán:  <span class="prescription__info-name">Ho, sốt</span>
+                            </div>
+                            <div>
+                                Lần khám gần nhất:  <span class="prescription__info-name">27/5/2023</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="prescription-item">
+                        <img src="../assets/images/default_men_avatar.jpg" alt="Patient Avatar" class="prescription__img">
+                        <div class="prescription__info">
+                            <div>
+                                Họ tên:  <span class="prescription__info-name">Nguyễn Văn B</span>                                
+                           </div>
+                            <div>
+                                Chẩn đoán:  <span class="prescription__info-name">Ho, sốt</span>
+                            </div>
+                            <div>
+                                Lần khám gần nhất:  <span class="prescription__info-name">27/5/2023</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="prescription-item">
+                        <img src="../assets/images/default_men_avatar.jpg" alt="Patient Avatar" class="prescription__img">
+                        <div class="prescription__info">
+                            <div>
+                                Họ tên:  <span class="prescription__info-name">Nguyễn Văn B</span>                                
+                           </div>
+                            <div>
+                                Chẩn đoán:  <span class="prescription__info-name">Ho, sốt</span>
+                            </div>
+                            <div>
+                                Lần khám gần nhất:  <span class="prescription__info-name">27/5/2023</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="prescription-item">
+                        <img src="../assets/images/default_men_avatar.jpg" alt="Patient Avatar" class="prescription__img">
+                        <div class="prescription__info">
+                            <div>
+                                Họ tên:  <span class="prescription__info-name">Nguyễn Văn B</span>                                
+                           </div>
+                            <div>
+                                Chẩn đoán:  <span class="prescription__info-name">Ho, sốt</span>
+                            </div>
+                            <div>
+                                Lần khám gần nhất:  <span class="prescription__info-name">27/5/2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal__form">
+                <h2 class="form__title">Nhập thông tin bệnh nhân</h2>
+                <div class="section">
+                    <h3 class="section__heading">Thông tin cơ bản:</h3>
+                    <div class="form__group">
+                        <div class="form__input">
+                            <label for="form__input-name">Tên: </label>
+                            <input type="text" id="form__input-name">
+                        </div>
+
+                        <div class="form__input">
+                            <label for="form__input-name">CMND/CCCD: </label>
+                            <input type="text" id="form__input-id">
+                        </div>
+
+                        <div class="form__input">
+                            <label for="form__input-name">Ngày sinh: </label>
+                            <input type="date" id="form__input-birthday">
+                        </div>
+
+                        <div class="form__input">
+                            <label for="form__input-name">BHYT: </label>
+                            <input type="text" id="form__input-insurance">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3 class="section__heading">Nhập thông tin bệnh án:</h3>
+                    <div class="form__group">
+                        <div class="form__input">
+                            <label for="">Ngày ghi nhận: </label> <input type="date" id="form__input-date">
+                        </div>
+
+                        <div class="form__input">
+                            <label for="">Triệu chứng: </label> <input type="text">
+                        </div>
+
+                        <div class="form__input">
+                            <label for="">Chẩn đoán: </label> <input type="text" name="" id="">
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="section btn-section">
+                    <button class="form__btn-close btn">Hủy thay đổi</button>
+                    <button class="form__btn-create btn">Lưu thông tin</button>
+                </div>
+            
+            
+            </div>
+        </div>
+    </div>
+
+    <script src="../javascript/doctor_logined_page.js"></script>
+</body>
+</html>

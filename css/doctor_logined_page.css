@@ -1,0 +1,177 @@
+/* Create Records  CSS*/
+.header__create-record-btn
+{
+    padding: 6px 16px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+
+/* prescription CSS*/
+.prescription-container {
+    background-color: #ecf0fe;
+    border-radius: 2px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 16px;
+    font-weight: bold;
+    justify-content: space-between;
+}
+
+.prescription-item {
+    margin-bottom: 10px;
+    width: 32%;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.prescription__img {
+    width: 116px;
+    height: 116px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 2px;
+}
+
+.prescription__info {
+    display: inline-block;
+    margin-left: 8px;
+}
+
+.prescription__info > div {
+    margin-bottom: 10px;
+}
+
+.prescription__info span {
+    font-weight: 500;
+}
+
+.prescription-list {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    height: 500px;
+}
+
+/* Schedule */
+.schedule-container {
+    background-color: #ecf0fe;
+    border-radius: 2px;
+    padding: 8px;
+    display: flex;
+}
+
+.schedule__table {
+    width: 30%;
+}
+
+.schedule__table > input {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.schedule__detail{
+    width: 70%;
+    margin-left: 8px;
+    background-color: #fff;
+    border-radius: 2px;
+    padding: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    height: 200px;
+    overflow: auto;
+}
+
+.schedule__detail > h4 {
+    margin: 10px 0;
+}
+
+.schedul-item {
+    width: 100%;
+    border-radius: 2px;
+    background-color: #ecf0fe;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.schedul-item > div {
+    margin-bottom: 8px;
+}
+
+.schedul-item span {
+    font-weight: 500;
+}
+
+/* modal customize */
+.modal__prescription-header {
+    margin-bottom: 10px;
+}
+
+.modal__prescription {
+    display: none;
+}
+
+.modal__prescription.active {
+    display: block;
+    position: relative;
+}
+
+/* form modal CSS */
+.modal__form {
+    padding: 10px 200px;
+    height: 100vh;
+    display: none;
+}
+
+.modal__form.active {
+    display: block;
+}
+
+.form__group {
+    background-color: #ecf0fe;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.form__title {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 30px;
+    text-align: center;
+    color: var(--primary-color-1);
+
+}
+
+.form__input {
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.form__input > label {
+    font-weight: bold;
+    display: inline-block;
+     margin-bottom: 8px;
+}
+
+.form__input > input {
+    padding: 4px;
+    outline: none;
+    border-radius: 2px;
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid rgba(0,0,0,0.5);
+}
+
+.btn-section {
+    text-align: center;
+}
+
+.form__btn-close {
+    margin-right: 20px;
+    background-color: grey;
+}
