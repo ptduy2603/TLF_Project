@@ -73,8 +73,8 @@ loginBtn.addEventListener('click', () => {
         },
         method: 'POST',
         body: JSON.stringify({
-            "phone" : phonenumInput.value,
-            "password" : passwordInput.value
+            "phone" : phonenumInput.value.trim(),
+            "password" : passwordInput.value.trim()
         })
     }
 
@@ -118,9 +118,9 @@ signupBtn.addEventListener('click', () => {
         },
         method: 'POST',
         body: JSON.stringify({
-            "username": nameInput.value,
-            "phone" : phonenumInput.value,
-            "password" : passwordInput.value
+            "username": nameInput.value.trim(),
+            "phone" : phonenumInput.value.trim(),
+            "password" : passwordInput.value.trim()
         })
     }
 
