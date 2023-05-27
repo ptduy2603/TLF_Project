@@ -1,4 +1,3 @@
-
 var emailinput = document.querySelectorAll('#login-modal input[type=text]')
 console.log('email input: ', emailinput)
 
@@ -57,7 +56,7 @@ for (let i = 0; i < readmoreBtns.length; i++) {
 }
 
 
-
+const host = 'https://wda-2023-tlf.onrender.com'
 
 // Login function
 var loginBtn = document.querySelector('#login-modal button[type=submit]');
@@ -67,24 +66,70 @@ loginBtn.addEventListener('click', () => {
     var passwordInput = document.querySelector('#login-modal #password-input')
 
 
-    var url = `https://wda-2023-tlf.onrender.com/v1/auth/login`
+    var url = host + `/v1/auth/login`
     var options = {
         headers: {
             "Content-Type": "application/json"
         },
         method: 'POST',
         body: JSON.stringify({
-            "phone" : phonenumInput.value,
-            "password" : passwordInput.value
+            "phone" : phonenumInput.value.trim(),
+            "password" : passwordInput.value.trim()
         })
     }
+
     fetch(url, options)
-        .then(res => res.json())
         .then(res => {
-            console.log(res['accessToken']);
+            if (res.status < 400) {
+                return res.json()
+            } else {
+                alert('Wrong username of password');
+            }
+        })
+        .then(res => {
+            console.log(res);
             document.cookie = 'accessToken=' + res['accessToken'];
-            window.location.href = './html/patient_logined_page.html';
+            document.cookie = 'userId=' + res['_id'];
+            if (res['admin']) {
+                window.location.href = 'https://youtube.com';
+            } else {
+                window.location.href = './html/patient_logined_page.html';
+            }
+        })
+        .catch(err => {
+            console.log(err);
         })
 })
 
-console.log(window.location.origin)
+
+// Signup function
+var signupBtn = document.querySelector('#signup-modal button[type=submit]');
+console.log(signupBtn);
+signupBtn.addEventListener('click', () => {
+    var phonenumInput = document.querySelector('#signup-modal #phone-input')
+    var nameInput = document.querySelector('#signup-modal #name-input')
+    var passwordInput = document.querySelector('#signup-modal #password-input')
+
+
+    var url = host + `/v1/auth/register`
+    var options = {
+        headers: {
+            "Content-Type": "application/json"
+        },
+        method: 'POST',
+        body: JSON.stringify({
+            "username": nameInput.value.trim(),
+            "phone" : phonenumInput.value.trim(),
+            "password" : passwordInput.value.trim()
+        })
+    }
+
+    fetch(url, options)
+        .then(res => {
+            if (res.status < 400) {
+                return res.json()
+            } else {
+                alert('Signup failed');
+            }
+        })
+})
