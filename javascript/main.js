@@ -1,3 +1,4 @@
+
 var emailinput = document.querySelectorAll('#login-modal input[type=text]')
 console.log('email input: ', emailinput)
 
@@ -86,31 +87,4 @@ loginBtn.addEventListener('click', () => {
         })
 })
 
-
-// Signup function
-var loginBtn = document.querySelector('#signup-modal button[type=submit]');
-console.log(signupBtn);
-signupBtn.addEventListener('click', () => {
-    var phonenumInput = document.querySelector('#signup-modal #phonenum-input')
-    var nameInput = document.querySelector('#signup-modal #name-input')
-    var phonenumInput = document.querySelector('#signup-modal #phonenum-input')
-    var repeatPasswordInput = document.querySelector('#signup-modal #repeat-password-input')
-
-
-    var url = `https://wda-2023-tlf.onrender.com/v1/auth/register`
-    var options = {
-        headers: {
-            "Content-Type": "application/json"
-        },
-        method: 'POST',
-        body: JSON.stringify({
-            "phone" : phonenumInput.value,
-            "password" : passwordInput.value
-        })
-    }
-    fetch(url, options)
-        .then(res => res.json())
-        .then(res => {
-            console.log(res['accessToken']);
-        })
-})
+console.log(window.location.origin)
