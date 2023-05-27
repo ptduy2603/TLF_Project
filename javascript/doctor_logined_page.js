@@ -54,3 +54,54 @@ formCloseBtn.onclick = function(event)
     modalElement.classList.remove('active');
     formElement.classList.remove('active');
 }
+
+function deleteAllCookies() {
+    const cookies = document.cookie.split(";");
+
+    for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i];
+        const eqPos = cookie.indexOf("=");
+        const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    }
+}
+
+
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
+
+var logoutBtn = document.getElementById('logout-btn');
+logoutBtn.onclick = function () {
+    deleteAllCookies();
+    window.location.href = "../index.html"
+}
+
+const host = 'https://wda-2023-tlf.onrender.com';
+var accessToken = getCookie('accessToken');
+var userId = getCookie('userId');
+
+function getUser() {
+    var url = host + '/v1/user/' + userId;
+    var options = {
+        headers: {
+            'token': 'Bearer ' + accessToken
+        }
+    }
+    return fetch(url, options)
+        .then(res => res.json())
+}
+
+getUser()
+    .then(userResponse => {
+        var userAvatar = document.getElementsByClassName('header__user-avatar')[0];
+        var username = document.getElementsByClassName('header__user-name')[0];
+
+        console.log(userAvatar, username, userResponse)
+
+        userAvatar.setAttribute('src', userResponse['avatar']);
+        username.innerHTML = userResponse['username']
+    })

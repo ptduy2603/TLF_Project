@@ -91,7 +91,7 @@ loginBtn.addEventListener('click', () => {
             document.cookie = 'accessToken=' + res['accessToken'];
             document.cookie = 'userId=' + res['_id'];
             if (res['admin']) {
-                window.location.href = 'https://youtube.com';
+                window.location.href = './html/doctor_logined_page.html';
             } else {
                 window.location.href = './html/patient_logined_page.html';
             }
@@ -109,7 +109,12 @@ signupBtn.addEventListener('click', () => {
     var phonenumInput = document.querySelector('#signup-modal #phone-input')
     var nameInput = document.querySelector('#signup-modal #name-input')
     var passwordInput = document.querySelector('#signup-modal #password-input')
+    var repeatPasswordInput = document.querySelector('#signup-modal #repeat-password-input')
 
+    if (passwordInput.value.trim() != repeatPasswordInput.value.trim()) {
+        alert('Repeat password not match!\nEnter again!');
+        return;
+    }
 
     var url = host + `/v1/auth/register`
     var options = {

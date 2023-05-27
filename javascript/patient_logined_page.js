@@ -83,8 +83,6 @@ function changeColorPhoneNum(){
 }
 changeColorPhoneNum();
 
-=======
-
 // Get cookie to login
 function getCookie(name) {
     const value = `; ${document.cookie}`;
@@ -121,7 +119,7 @@ function getPatientRecord() {
 }
 
 function getAllTreatments() {
-    var url = host + '/v1/treatment/';
+    var url = host + '/v1/treatment/patient/' + userId;
     var options = {
         headers: {
             'token': 'Bearer ' + accessToken
@@ -300,137 +298,3 @@ logoutBtn.onclick = function () {
     deleteAllCookies();
     window.location.href = "../index.html"
 }
-
-const prescriptions = [
-    {
-        "userID": "6471c1ad15560519a06103be",
-        "prescriptionDay": "2023-05-28T00:00:00.000Z",
-        "drugs": [
-            {
-                "name": "Paracetamol",
-                "amount": 3,
-                "time": "2023-05-28T00:00:00.000Z",
-                "_id": "6471fcb67d0b8972a4bd92a6"
-            },
-            {
-                "name": "Dextromethorphan",
-                "amount": 4,
-                "time": "2023-05-28T00:00:00.000Z",
-                "_id": "6471fcb67d0b8972a4bd92a7"
-            },
-            {
-                "name": "Dextromethorphan",
-                "amount": 4,
-                "time": "2023-05-28T00:00:00.000Z",
-                "_id": "6471fcb67d0b8972a4bd92a8"
-            }
-        ],
-        "totalCost": 20000,
-        "treatmentID": "646f8f7bbef3e55a07abb4bd",
-        "_id": "6471fcb67d0b8972a4bd92a5",
-        "createdAt": "2023-05-27T12:51:02.835Z",
-        "updatedAt": "2023-05-27T12:51:02.835Z",
-        "__v": 0
-    },
-    {
-        "userID": "5f3782b7a3b742001fdf8a76",
-        "prescriptionDay": "2023-06-10T00:00:00.000Z",
-        "drugs": [
-            {
-                "name": "Amoxicillin",
-                "amount": 1,
-                "time": "2023-06-10T00:00:00.000Z",
-                "_id": "6471fcb67d0b8972a4bd92a9"
-            },
-            {
-                "name": "Loratadine",
-                "amount": 2,
-                "time": "2023-06-10T00:00:00.000Z",
-                "_id": "6471fcb67d0b8972a4bd92aa"
-            }
-        ],
-        "totalCost": 150000,
-        "treatmentID": "646f8f7bbef3e55a07abb4be",
-        "_id": "6471fcb67d0b8972a4bd92a7",
-        "createdAt": "2023-06-09T14:25:40.835Z",
-        "updatedAt": "2023-06-09T14:25:40.835Z",
-        "__v": 0
-    },
-    {
-        "userID": "5f3782b7a3b742001fdf8a76",
-        "prescriptionDay": "2023-06-15T00:00:00.000Z",
-        "drugs": [
-            {
-                "name": "Ibuprofen",
-                "amount": 5,
-                "time": "2023-06-15T00:00:00.000Z",
-                "_id": "6471fcb67d0b8972a4bd92ab"
-            },
-            {
-                "name": "Diphenhydramine",
-                "amount": 2,
-                "time": "2023-06-15T00:00:00.000Z",
-                "_id": "6471fcb67d0b8972a4bd92ac"
-            },
-            {
-                "name": "Cough Syrup",
-                "amount": 3,
-                "time": "2023-06-15T00:00:00.000Z",
-                "_id": "6471fcb67d0b8972a4bd92ad"
-            }
-        ],
-        "totalCost": 80000,
-        "treatmentID": "646f8f7bbef3e55a07abb4bf",
-        "_id": "6471fcb67d0b8972a4bd92a8",
-        "createdAt": "2023-06-09T14:25:40.835Z",
-        "updatedAt": "2023-06-09T14:25:40.835Z",
-        "__v": 0
-    }
-]
-
-const b = [
-    {
-        "_id": "646f8f7bbef3e55a07abb4bd",
-        "userID": ObjectId("6471c1ad15560519a06103b"),
-        "treatmentDay": "2023-05-25T00:00:00.000Z",
-        "symptom": "Hắt hơi, sổ mũi hoặc nghẹt mũi, đau họng, ho, mệt mỏi",
-        "diagnosis": "Cảm lạnh",
-        "status": true,
-        "createdAt": "2023-05-25T16:40:27.690Z",
-        "updatedAt": "2023-05-25T16:40:27.690Z",
-        "__v": 0
-    },
-    {
-        "_id": "646f8f7bbef3e55a07abb4be",
-        "userID": ObjectId("6471c1ad15560519a06103b"),
-        "treatmentDay": "2023-05-26T00:00:00.000Z",
-        "symptom": "Đau đầu nhức nhối, mệt mỏi",
-        "diagnosis": "Mất ngủ",
-        "status": true,
-        "createdAt": "2023-05-26T09:15:42.218Z",
-        "updatedAt": "2023-05-26T09:15:42.218Z",
-        "__v": 0
-    },
-    {
-        "_id": "646f8f7bbef3e55a07abb4bf",
-        "userID": ObjectId("6471c1ad15560519a06103b"),
-        "treatmentDay": "2023-05-27T00:00:00.000Z",
-        "symptom": "Đau bụng, tiêu chảy",
-        "diagnosis": "Viêm đại tràng",
-        "status": true,
-        "createdAt": "2023-05-27T14:20:59.731Z",
-        "updatedAt": "2023-05-27T14:20:59.731Z",
-        "__v": 0
-    },
-    {
-        "_id": "646f8f7bbef3e55a07abb4c0",
-        "userID": ObjectId("6471c1ad15560519a06103b"),
-        "treatmentDay": "2023-05-28T00:00:00.000Z",
-        "symptom": "Sốt, mệt mỏi",
-        "diagnosis": "Viêm họng",
-        "status": true,
-        "createdAt": "2023-05-28T10:55:17.911Z",
-        "updatedAt": "2023-05-28T10:55:17.911Z",
-        "__v": 0
-    }
-]
