@@ -1,5 +1,6 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
+
 // get elements
 const treamentBtnElement = $('.view-more-btn--treament');
 const prescriptionBtnElement = $('.view-more-btn--prescription');
@@ -11,6 +12,10 @@ const modalHeadingElement = $('.modal__heading');
 const prescriptionSortOptionBox = $('prescription-sort__box')
 const prescriptionSortOptions = $$('.prescription-sort__box-item');
 const prescriptionSortLable = $('.prescription-sort-option');
+const phoneNumberElement = $('.contact__phone-number');
+
+// declare variables
+var isRedPhoneNum = true;
 
 // handle events
 treamentBtnElement.onclick = function(event){
@@ -63,4 +68,16 @@ for (let i = 0; i < readmoreBtns.length; i++) {
         }
     })
 }
+
+// change color of phone number 
+function changeColorPhoneNum(){
+    setInterval(() => {
+        if(isRedPhoneNum)
+            phoneNumberElement.style.color = 'var(--primary-color-1)';
+        else 
+            phoneNumberElement.style.color = 'red';
+        isRedPhoneNum = !isRedPhoneNum;
+    }, 1000)
+}
+changeColorPhoneNum();
 

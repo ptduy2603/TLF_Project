@@ -1,0 +1,99 @@
+/* prescription CSS*/
+.prescription-container {
+    background-color: #ecf0fe;
+    border-radius: 2px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 16px;
+    font-weight: bold;
+    justify-content: space-between;
+}
+
+.prescription-item {
+    margin-bottom: 10px;
+    width: 32%;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.prescription__img {
+    width: 116px;
+    height: 116px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 2px;
+}
+
+.prescription__info {
+    display: inline-block;
+    margin-left: 8px;
+}
+
+.prescription__info > div {
+    margin-bottom: 10px;
+}
+
+.prescription__info span {
+    font-weight: 500;
+}
+
+.prescription-list {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    height: 500px;
+}
+
+/* Schedule */
+.schedule-container {
+    background-color: #ecf0fe;
+    border-radius: 2px;
+    padding: 8px;
+    display: flex;
+}
+
+.schedule__table {
+    width: 30%;
+}
+
+.schedule__table > input {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.schedule__detail{
+    width: 70%;
+    margin-left: 8px;
+    background-color: #fff;
+    border-radius: 2px;
+    padding: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    height: 200px;
+    overflow: auto;
+}
+
+.schedule__detail > h4 {
+    margin: 10px 0;
+}
+
+.schedul-item {
+    width: 100%;
+    border-radius: 2px;
+    background-color: #ecf0fe;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.schedul-item > div {
+    margin-bottom: 8px;
+}
+
+.schedul-item span {
+    font-weight: 500;
+}
