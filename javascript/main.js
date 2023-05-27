@@ -62,7 +62,7 @@ for (let i = 0; i < readmoreBtns.length; i++) {
 // Login function
 var loginBtn = document.querySelector('#login-modal button[type=submit]');
 console.log(loginBtn);
-loginBtn.addEventListener('click', (event) => {
+loginBtn.addEventListener('click', () => {
     var phonenumInput = document.querySelector('#login-modal #phonenum-input')
     var passwordInput = document.querySelector('#login-modal #password-input')
 
@@ -86,3 +86,5 @@ loginBtn.addEventListener('click', (event) => {
             window.location.href = './html/patient_logined_page.html';
         })
 })
+
+console.log(window.location.origin)

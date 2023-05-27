@@ -45,8 +45,16 @@ body {
 #header-signup-btn,
 #header-chat-btn {
     float: right;
-    margin: 0 10px;
+    border-radius: 22px;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: var(--primary-color-1);
+    color: #fff;
     font-size: 13px;
+    padding: 10px 20px;
+    font-weight: bold;
 }
 
 #header-login-btn:hover,
@@ -121,6 +129,20 @@ body {
 #navbar #contact span {
     color: red;
 }
+
+#contact {
+    text-align: center;
+}
+
+.contact__phone {
+    margin-top: 10px;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    width: 100%;
+    font-weight: bolder;
+}
+
 
 /* Content */
 
@@ -466,6 +488,7 @@ body {
 #footer {
     height: 100px;
     background-color: aqua;
+}
   
 /* Center the image and position the close button */
 #login-modal .imgcontainer {
