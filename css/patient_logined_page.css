@@ -13,7 +13,8 @@
     text-transform: uppercase;
 }
 
-.header__left-section, .header__right-section {
+.header__left-section,
+.header__right-section {
     display: flex;
     align-items: center;
 }
@@ -48,7 +49,7 @@
     margin: 0;
     padding: 8px 0;
     border-radius: 2px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     min-width: 220px;
     display: none;
     animation: FadeIn ease-in 0.2s forwards;
@@ -86,7 +87,7 @@
 }
 
 .notification-item:hover {
-    background-color: rgba(0,0,0,0.02);
+    background-color: rgba(0, 0, 0, 0.02);
 }
 
 .header__user {
@@ -133,16 +134,17 @@
 }
 
 .header__user-item:hover {
-    background-color: rgba(0,0,0,0.03);
+    background-color: rgba(0, 0, 0, 0.03);
     transition: all ease-in 0.2s;
 }
 
-.header__user:hover .header__user-box{
+.header__user:hover .header__user-box {
     display: block;
     z-index: 1;
 }
 
-.header__notification:hover , .header__user:hover {
+.header__notification:hover,
+.header__user:hover {
     color: var(--primary-color-1);
 }
 
@@ -161,16 +163,14 @@
 }
 
 /* content CSS */
-#content {
-    
-}
+#content {}
 
 #patient-section {
     display: flex;
     justify-content: space-between;
 }
 
-#patient-section > div {
+#patient-section>div {
     width: 50%;
     height: fit-content;
     font-size: 14px;
@@ -178,11 +178,12 @@
     line-height: 1.6;
 }
 
-#patient-info , #food {
+#patient-info,
+#food {
     background-color: #ecf0fe;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 4px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 #patient-info {
@@ -207,7 +208,7 @@
     justify-content: space-around;
 }
 
-#food > ul li {
+#food>ul li {
     list-style: inside;
     font-weight: 500;
 }
@@ -221,7 +222,8 @@
 }
 
 /* Treament section */
-#treament-contain, #prescription-contain {
+#treament-contain,
+#prescription-contain {
     background-color: #ecf0fe;
     border-radius: 2px;
     padding: 8px;
@@ -229,7 +231,8 @@
     flex-direction: column;
 }
 
-.treament , .prescription{
+.treament,
+.prescription {
     width: 100%;
     padding: 8px;
     font-size: 14px;
@@ -242,7 +245,8 @@
     margin-bottom: 8px;
 }
 
-.treament-detail , .prescription-detail {
+.treament-detail,
+.prescription-detail {
     font-size: 12px;
     font-weight: bolder;
     margin: auto 0;
@@ -250,12 +254,14 @@
     margin-right: 20px;
 }
 
-.treament-detail:hover, .prescription-detail:hover {
+.treament-detail:hover,
+.prescription-detail:hover {
     color: var(--primary-color-1);
 }
 
 /* filter CSS */
-#prescription-section-header, #prescription-filter{
+#prescription-section-header,
+#prescription-filter {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -274,7 +280,7 @@
     font-weight: bold;
 }
 
-.prescription-search > div{
+.prescription-search>div {
     display: inline-block;
     margin-left: 10px;
 }
@@ -316,7 +322,7 @@
     position: relative;
 }
 
-.prescription-sort-option{
+.prescription-sort-option {
     font-size: 14px;
     font-weight: 500;
 }
@@ -328,8 +334,7 @@
     margin-left: 20px;
 }
 
-.prescription-sort__box
-{
+.prescription-sort__box {
     position: absolute;
     top: 100%;
     width: 100%;
@@ -354,7 +359,7 @@
 
 .prescription-sort__box-item:hover {
     color: var(--primary-color-1);
-    background-color: rgba(0,0,0,0.02);
+    background-color: rgba(0, 0, 0, 0.02);
 }
 
 .prescription-sort:hover .prescription-sort__box {
@@ -388,7 +393,8 @@
     opacity: 0.8;
 }
 
-.treatment-list , .prescription-list {
+.treatment-list,
+.prescription-list {
     padding: 16px 8px 8px;
     border-radius: 2px;
     width: 100%;
@@ -398,7 +404,7 @@
     display: none;
 }
 
-.treatment-list.active , .prescription-list.active {
+.treatment-list.active,
+.prescription-list.active {
     display: block;
 }
-
