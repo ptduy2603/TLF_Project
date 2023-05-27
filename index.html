@@ -7,25 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/main.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
     <title>Phòng khám TLF</title>
 </head>
 
-<body class="">
+<body>
     <!-- Default page is not-logined page -->
     <div id="header">
         <img id="header-logo" src="./assets/images/favicon.png" alt="TLF">
-        <h3 id="header-title">Phòng Khám TLF</h3>
-        <button id="header-chat-btn" class="btn">Nhắn tin</button>
-        <button id="header-login-btn" class="btn">Đăng nhập</button>
+        <h3 id="header-title">PHÒNG KHÁM TLF</h3>
+        <button id="header-chat-btn">Nhắn tin</button>
+        <button onclick="document.getElementById('signup-modal').style.display='block'" style="width:auto;"
+            id="header-signup-btn">Đăng ký</button>
+        <button onclick="document.getElementById('login-modal').style.display='block'" style="width:auto;"
+            id="header-login-btn">Đăng nhập</button>
+        </h1>
     </div>
-    
+
     <div id="navbar" class="">
         <ul id="navbar-list">
-            <a href="#"><li>Thông tin phòng khám</li></a>
-            <a href="#"><li>Thông tin bác sĩ</li></a>
-            <a href="#"><li>Hướng dẫn</li></a>
+            <a href="#content-surgery">
+                <li>Thông tin phòng khám</li>
+            </a>
+            <a href="#content-doctor">
+                <li>Thông tin bác sĩ</li>
+            </a>
+            <a href="#content-instruction">
+                <li>Hướng dẫn</li>
+            </a>
         </ul>
         <div id="contact">
             Liên hệ:<br>
@@ -33,15 +42,186 @@
             <a href="https://instagram.com">Instagram</a>
         </div>
     </div>
-    
+
     <div id="content">
-        
-    </div>
-    <!-- <div id="footer">
-        This is footer
-    </div> -->
-    
-    <script src="./javascript/main.js"></script>
+        <div id="content-slide" class="fade content-section"></div>
+        <div id="content-surgery" class="content-section">
+            <h1>Thông tin phòng khám</h1>
+            <div id="content-surgery-card">
+                <div id="content-surgery-text">
+                    <h2>Phòng khám TLF</h2>
+                    <br>
+                    <p>
+                        <b>Địa chỉ</b>: Đường Hàn Thuyên, khu phố 6 P, Thủ Đức, Thành phố Hồ Chí Minh<br>
+                        <b>Thời gian mở cửa</b>: Từ 7h đến 17h tất cả các ngày trong tuần<br>
+                    </p>
+                </div>
+                <img src="./assets/images/surgery3.jpg" alt="">
+            </div>
+        </div>
+        <div id="content-doctor" class="content-section">
+            <h1>Thông tin bác sĩ</h1>
+            <div class="doctor-list row">
+                <div class="doctor-item col col-3">
+                    <img src="./assets/images/doctors/doctor1.jpg" alt="" class="doctor-img">
+                    <div class="doctor-text">
+                        <div class="doctor-des">Nguyễn Ngô Quế Lan</div>
+                        <div class="doctor-date">Học hàm: ...</div>
+                        <p class="doctor-content">Chuyên ngành: ...</p>
+                    </div>
+                </div>
+
+                <div class="doctor-item col col-3">
+                    <img src="./assets/images/doctors/doctor2.jpg" alt="" class="doctor-img">
+                    <div class="doctor-text">
+                        <div class="doctor-des">Lê Bích Ngọc</div>
+                        <div class="doctor-date">Học hàm: ...</div>
+                        <p class="doctor-content">Chuyên ngành: ...</p>
+                    </div>
+                </div>
+
+                <div class="doctor-item col col-3">
+                    <img src="./assets/images/doctors/doctor3.jpg" alt="" class="doctor-img">
+                    <div class="doctor-text">
+                        <div class="doctor-des">Nguyễn Thị Minh</div>
+                        <div class="doctor-date">Học hàm: ...</div>
+                        <p class="doctor-content">Chuyên ngành: ...</p>
+                    </div>
+                </div>
+            </div>
+            <div id="content-instruction" class="content-section">
+                <h1>Hướng dẫn</h1>
+                <p style="font-size: 17px">Chào mừng quý khách đến với Phòng khám chúng tôi! Chúng tôi cam kết mang đến cho quý khách một trải
+                    nghiệm chăm sóc sức khỏe tốt nhất và một môi trường thoải mái và chuyên nghiệp.</p>
+                <p style="font-size: 17px">Để giúp quý khách có trải nghiệm thuận tiện và hiệu quả,
+                    dưới đây là một số hướng dẫn khi đến phòng khám:</p>
+                <div>
+                    <p><b>1. Đăng ký</b><span class="dots">...</span><span class="more">
+
+                            : Đầu tiên, quý khách vui lòng đến quầy đăng ký để đăng ký thông tin cá nhân và ghi danh.
+                            Xin hãy mang theo các giấy tờ cần thiết như thẻ bảo hiểm y tế, giấy xác nhận hẹn khám (nếu
+                            có).
+
+                        </span></p>
+
+                    <button class="myBtn">Xem thêm</button>
+                </div>
+                <div>
+                    <p><b>2. Thời gian chờ</b><span class="dots">...</span><span class="more">
+
+                            : Chúng tôi luôn cố gắng để hạn chế thời gian chờ đợi của quý khách. Tuy nhiên,
+                            do
+                            một số trường hợp khẩn cấp có thể xảy ra, xin quý khách vui lòng thông cảm nếu có sự trì
+                            hoãn.
+                            Chúng tôi sẽ cố gắng làm việc hiệu quả để đảm bảo quý khách được phục vụ kịp thời.
+
+                        </span></p>
+
+                    <button class="myBtn">Xem thêm</button>
+                </div>
+
+                <div>
+                    <p><b>3. Buổi khám</b><span class="dots">...</span><span class="more">
+
+                            : Khi đến lượt khám của mình, quý khách sẽ được đón tiếp bởi bác sĩ hoặc nhân viên y tế
+                            chuyên
+                            nghiệp. Xin vui lòng chia sẻ các triệu chứng, lịch sử bệnh tật và mọi thông tin liên quan để
+                            giúp bác sĩ có cái nhìn toàn diện về tình trạng sức khỏe của quý khách.
+
+                        </span></p>
+
+                    <button class="myBtn">Xem thêm</button>
+                </div>
+
+                <div>
+                    <p><b>4. Chẩn đoán và điều trị</b><span class="dots">...</span><span class="more">
+
+                            : Dựa trên cuộc khám và các thông tin quý khách cung cấp, bác sĩ sẽ tiến hành chẩn đoán và đề
+                            xuất
+                            các phương pháp điều trị phù hợp. Xin hãy đặt câu hỏi và thảo luận với bác sĩ để hiểu rõ về
+                            tình
+                            trạng sức khỏe của mình và các phương pháp điều trị khả dụng.
+
+                        </span></p>
+
+                    <button class="myBtn">Xem thêm</button>
+                </div>
+
+                <div>
+                    <p><b>5. Lịch tái khám</b><span class="dots">...</span><span class="more">
+
+                            : Sau khi điều trị, bác sĩ sẽ đề xuất lịch tái khám (nếu cần thiết) hoặc cung cấp các hướng
+                            dẫn
+                            chăm sóc sức khỏe. Xin vui lòng tuân thủ lịch tái khám và các chỉ dẫn để đảm bảo quá trình
+                            điều
+                            trị được thành công.
+
+                        </span></p>
+
+                    <button class="myBtn">Xem thêm</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="signup-modal" class="modal">
+            <form class="modal-content animate">
+                <div class="container">
+                    <h1>Đăng ký</h1>
+                    <label for="phonenum"><b>Số điện thoại</b></label>
+                    <input type="text" placeholder="Nhập số điện thoại" name="phonenum" required>
+
+                    <label for="name"><b>Họ và tên</b></label>
+                    <input type="text" placeholder="Nhập họ và tên" name="name" required>
+
+                    <label for="psw"><b>Mật khẩu</b></label>
+                    <input type="password" placeholder="Nhập mật khẩu" name="psw" required>
+
+                    <label for="psw-repeat"><b>Lặp lại mật khẩu</b></label>
+                    <input type="password" placeholder="Lặp lại mật khẩu" name="psw-repeat" required>
+
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Nhớ tài
+                        khoản
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Đồng ý với
+                        các <a href="#" style="color:dodgerblue">Điều khoản và chính sách</a> của chúng tôi.
+                    </label>
+
+                    <div class="clearfix">
+                        <button type="button" onclick="document.getElementById('signup-modal').style.display='none'"
+                            class="cancelbtn">Thoát</button>
+                        <button type="submit" class="signupbtn">Đăng ký</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="login-modal" class="modal">
+            <form class="modal-content animate" onsubmit="return false;">
+                <div class="container">
+                    <h1>Đăng nhập</h1>
+                    <label for="uname"><b>Số điện thoại</b></label>
+                    <input id="phonenum-input" type="text" placeholder="Nhập số điện thoại" name="uname" required>
+
+                    <label for="psw"><b>Mật khẩu</b></label>
+                    <input id="password-input" type="password" placeholder="Nhập mật khẩu" name="psw" required>
+
+                    <button type="submit">Đăng nhập</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Nhớ tài khoản
+                    </label>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('login-modal').style.display='none'"
+                        class="cancelbtn">Cancel</button>
+                    <span class="psw">Quên <a href="#">mật khẩu?</a></span>
+                </div>
+            </form>
+        </div>
+
+        <script src="./javascript/main.js"></script>
 </body>
 
 </html>
