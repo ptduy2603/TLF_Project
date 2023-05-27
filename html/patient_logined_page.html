@@ -38,11 +38,11 @@
                 </div>
                 <div class="header__user">
                     <img src="../assets/images/default_men_avatar.jpg" alt="User Avatar" class="header__user-avatar">
-                    <span class="header__user-name">Nguyễn Văn B</span>
+                    <span class="header__user-name">Tên tài khoản</span>
                     <ul class="header__user-box">
                         <li class="header__user-item"><a href="#">Thông tin tài khoản</a></li>
                         <li class="header__user-item"><a href="#">Đổi mật khẩu</a></li>
-                        <li class="header__user-item"><a href="#">Đăng xuất</a></li>
+                        <li id="logout-btn" class="header__user-item"><a href="#">Đăng xuất</a></li>
                     </ul>
                 </div>
             </div>
@@ -94,16 +94,16 @@
                         <img src="../assets/images/default_men_avatar.jpg" alt="User Avatar" id="patient-avatar">
                         <div>
                             <div>
-                                Họ và tên: <span id="patient-name">Nguyễn Văn B</span>
+                                Họ và tên: <span id="patient-name"></span>
                             </div>
                             <div>
-                                Ngày sinh: <span id="patient-birthday">26/5/2023</span>
+                                Ngày sinh: <span id="patient-birthday"></span>
                             </div>
                             <div>
-                                CMND/CCCD: <span id="patient-id">123456</span>
+                                CMND/CCCD: <span id="patient-id">.......</span>
                             </div>
                             <div>
-                                BHYT: <span id="patient-insurance">654321</span>
+                                Mã BHYT: <span id="patient-insurance">......</span>
                             </div>
                         </div>
                     </div>
@@ -138,74 +138,7 @@
             <div class="section" id="treatment-section">
                 <h3 class="section__heading">Lộ trình điều trị:</h3>
                 <div id="treament-contain">
-                    <div class="treament">
-                        <div>
-                            <div id="treament-date">
-                                Ngày ghi nhận: <span>26/5/2023</span>
-                            </div>
-                            <div id="treament-symptom">
-                                Triệu chứng: <span>.....</span>
-                            </div>
-                            <div id="treament-diagnose">
-                                Chẩn đoán: <span>.....</span>
-                            </div>
-                        </div>
-                        <div>
-                            <div id="treament-done">
-                                Đã điều trị: <span>.....</span>
-                            </div>
-                            <div id="treament-prescription">
-                                Đơn thuốc điều trị: <span>.....</span>
-                            </div>
-                        </div>
-                        <p class="treament-detail">Xem chi tiết</p>
-                    </div>
-
-                    <div class="treament">
-                        <div>
-                            <div id="treament-date">
-                                Ngày ghi nhận: <span>26/5/2023</span>
-                            </div>
-                            <div id="treament-symptom">
-                                Triệu chứng: <span>Ho, sốt</span>
-                            </div>
-                            <div id="treament-diagnose">
-                                Chẩn đoán: <span>Bị cảm</span>
-                            </div>
-                        </div>
-                        <div>
-                            <div id="treament-done">
-                                Đã điều trị: <span>.....</span>
-                            </div>
-                            <div id="treament-prescription">
-                                Đơn thuốc điều trị: <span>.....</span>
-                            </div>
-                        </div>
-                        <p class="treament-detail">Xem chi tiết</p>
-                    </div>
-
-                    <div class="treament">
-                        <div>
-                            <div id="treament-date">
-                                Ngày ghi nhận: <span>26/5/2023</span>
-                            </div>
-                            <div id="treament-symptom">
-                                Triệu chứng: <span>.....</span>
-                            </div>
-                            <div id="treament-diagnose">
-                                Chẩn đoán: <span>.....</span>
-                            </div>
-                        </div>
-                        <div>
-                            <div id="treament-done">
-                                Đã điều trị: <span>.....</span>
-                            </div>
-                            <div id="treament-prescription">
-                                Đơn thuốc điều trị: <span>.....</span>
-                            </div>
-                        </div>
-                        <p class="treament-detail">Xem chi tiết</p>
-                    </div>
+                    <div id="treatment-limit-list"></div>
                     <button class="view-more-btn view-more-btn--treament btn">Xem thêm</button>
                 </div>
             </div>
@@ -233,74 +166,7 @@
                     </div>
                 </div>
                 <div id="prescription-contain">
-                    <div class="prescription">
-                        <div>
-                            <div id="prescription-date">
-                                Ngày dùng thuốc: <span>26/5/2023</span>
-                            </div>
-                            <div id="prescription-time">
-                                Thời gian duy trì: <span>.....</span>
-                            </div>
-                            <div id="prescription-price">
-                                Chi phí: <span>.....</span>
-                            </div>
-                        </div>
-                        <div>
-                            <div id="prescription-object">
-                                Sử dụng cho: <span>.....</span>
-                            </div>
-                            <div id="prescription-treament">
-                                Chuyển đến lộ trình: <span>.....</span>
-                            </div>
-                        </div>
-                        <p class="prescription-detail">Xem chi tiết</p>
-                    </div>
-
-                    <div class="prescription">
-                        <div>
-                            <div id="prescription-date">
-                                Ngày dùng thuốc: <span>26/5/2023</span>
-                            </div>
-                            <div id="prescription-time">
-                                Thời gian duy trì: <span>.....</span>
-                            </div>
-                            <div id="prescription-price">
-                                Chi phí: <span>.....</span>
-                            </div>
-                        </div>
-                        <div>
-                            <div id="prescription-object">
-                                Sử dụng cho: <span>.....</span>
-                            </div>
-                            <div id="prescription-treament">
-                                Chuyển đến lộ trình: <span>.....</span>
-                            </div>
-                        </div>
-                        <p class="prescription-detail">Xem chi tiết</p>
-                    </div>
-
-                    <div class="prescription">
-                        <div>
-                            <div id="prescription-date">
-                                Ngày dùng thuốc: <span>26/5/2023</span>
-                            </div>
-                            <div id="prescription-time">
-                                Thời gian duy trì: <span>.....</span>
-                            </div>
-                            <div id="prescription-price">
-                                Chi phí: <span>.....</span>
-                            </div>
-                        </div>
-                        <div>
-                            <div id="prescription-object">
-                                Sử dụng cho: <span>.....</span>
-                            </div>
-                            <div id="prescription-treament">
-                                Chuyển đến lộ trình: <span>.....</span>
-                            </div>
-                        </div>
-                        <p class="prescription-detail">Xem chi tiết</p>
-                    </div>
+                    <div id="prescription-limit-list"></div>
                     <button class="view-more-btn view-more-btn--prescription btn">Xem thêm</button>
                 </div>
             </div>
@@ -331,7 +197,7 @@
                             <p class="doctor-content">Chuyên ngành: ...</p>
                         </div>
                     </div>
-    
+
                     <div class="doctor-item col col-3">
                         <img src="../assets/images/doctors/doctor2.jpg" alt="" class="doctor-img">
                         <div class="doctor-text">
@@ -340,7 +206,7 @@
                             <p class="doctor-content">Chuyên ngành: ...</p>
                         </div>
                     </div>
-    
+
                     <div class="doctor-item col col-3">
                         <img src="../assets/images/doctors/doctor3.jpg" alt="" class="doctor-img">
                         <div class="doctor-text">
@@ -356,76 +222,84 @@
                 <h3 class="section__heading">Hướng dẫn:</h3>
 
                 <div id="content-instruction" class="content-section">
-                    <p style="font-size: 17px">Chào mừng quý khách đến với Phòng khám chúng tôi! Chúng tôi cam kết mang đến
+                    <p style="font-size: 17px">Chào mừng quý khách đến với Phòng khám chúng tôi! Chúng tôi cam kết mang
+                        đến
                         cho quý khách một trải
                         nghiệm chăm sóc sức khỏe tốt nhất và một môi trường thoải mái và chuyên nghiệp.</p>
                     <p style="font-size: 17px">Để giúp quý khách có trải nghiệm thuận tiện và hiệu quả,
                         dưới đây là một số hướng dẫn khi đến phòng khám:</p>
                     <div>
                         <p><b>1. Đăng ký</b><span class="dots">...</span><span class="more">
-    
-                                : Đầu tiên, quý khách vui lòng đến quầy đăng ký để đăng ký thông tin cá nhân và ghi danh.
-                                Xin hãy mang theo các giấy tờ cần thiết như thẻ bảo hiểm y tế, giấy xác nhận hẹn khám (nếu
+
+                                : Đầu tiên, quý khách vui lòng đến quầy đăng ký để đăng ký thông tin cá nhân và ghi
+                                danh.
+                                Xin hãy mang theo các giấy tờ cần thiết như thẻ bảo hiểm y tế, giấy xác nhận hẹn khám
+                                (nếu
                                 có).
-    
+
                             </span></p>
-    
+
                         <button class="myBtn">Xem thêm</button>
                     </div>
 
                     <div>
                         <p><b>2. Thời gian chờ</b><span class="dots">...</span><span class="more">
-    
+
                                 : Chúng tôi luôn cố gắng để hạn chế thời gian chờ đợi của quý khách. Tuy nhiên,
                                 do
                                 một số trường hợp khẩn cấp có thể xảy ra, xin quý khách vui lòng thông cảm nếu có sự trì
                                 hoãn.
                                 Chúng tôi sẽ cố gắng làm việc hiệu quả để đảm bảo quý khách được phục vụ kịp thời.
-    
+
                             </span></p>
-    
+
                         <button class="myBtn">Xem thêm</button>
                     </div>
-    
+
                     <div>
                         <p><b>3. Buổi khám</b><span class="dots">...</span><span class="more">
-    
+
                                 : Khi đến lượt khám của mình, quý khách sẽ được đón tiếp bởi bác sĩ hoặc nhân viên y tế
                                 chuyên
-                                nghiệp. Xin vui lòng chia sẻ các triệu chứng, lịch sử bệnh tật và mọi thông tin liên quan để
+                                nghiệp. Xin vui lòng chia sẻ các triệu chứng, lịch sử bệnh tật và mọi thông tin liên
+                                quan để
                                 giúp bác sĩ có cái nhìn toàn diện về tình trạng sức khỏe của quý khách.
-    
+
                             </span></p>
-    
+
                         <button class="myBtn">Xem thêm</button>
                     </div>
-    
+
                     <div>
                         <p><b>4. Chẩn đoán và điều trị</b><span class="dots">...</span><span class="more">
-    
-                                : Dựa trên cuộc khám và các thông tin quý khách cung cấp, bác sĩ sẽ tiến hành chẩn đoán và
+
+                                : Dựa trên cuộc khám và các thông tin quý khách cung cấp, bác sĩ sẽ tiến hành chẩn đoán
+                                và
                                 đề
                                 xuất
-                                các phương pháp điều trị phù hợp. Xin hãy đặt câu hỏi và thảo luận với bác sĩ để hiểu rõ về
+                                các phương pháp điều trị phù hợp. Xin hãy đặt câu hỏi và thảo luận với bác sĩ để hiểu rõ
+                                về
                                 tình
                                 trạng sức khỏe của mình và các phương pháp điều trị khả dụng.
-    
+
                             </span></p>
-    
+
                         <button class="myBtn">Xem thêm</button>
                     </div>
-    
+
                     <div>
                         <p><b>5. Lịch tái khám</b><span class="dots">...</span><span class="more">
-    
-                                : Sau khi điều trị, bác sĩ sẽ đề xuất lịch tái khám (nếu cần thiết) hoặc cung cấp các hướng
+
+                                : Sau khi điều trị, bác sĩ sẽ đề xuất lịch tái khám (nếu cần thiết) hoặc cung cấp các
+                                hướng
                                 dẫn
-                                chăm sóc sức khỏe. Xin vui lòng tuân thủ lịch tái khám và các chỉ dẫn để đảm bảo quá trình
+                                chăm sóc sức khỏe. Xin vui lòng tuân thủ lịch tái khám và các chỉ dẫn để đảm bảo quá
+                                trình
                                 điều
                                 trị được thành công.
-    
+
                             </span></p>
-    
+
                         <button class="myBtn">Xem thêm</button>
                     </div>
 
@@ -441,309 +315,8 @@
                 <h4 class="modal__heading">Lịch sử lộ trình điều trị:</h4>
                 <i class="fa-solid fa-xmark modal__close-icon"></i>
             </div>
-            <div class="treatment-list">
-                <div class="treament">
-                    <div>
-                        <div id="treament-date">
-                            Ngày ghi nhận: <span>26/5/2023</span>
-                        </div>
-                        <div id="treament-symptom">
-                            Triệu chứng: <span>.....</span>
-                        </div>
-                        <div id="treament-diagnose">
-                            Chẩn đoán: <span>.....</span>
-                        </div>
-                    </div>
-                    <div>
-                        <div id="treament-done">
-                            Đã điều trị: <span>.....</span>
-                        </div>
-                        <div id="treament-prescription">
-                            Đơn thuốc điều trị: <span>.....</span>
-                        </div>
-                    </div>
-                    <p class="treament-detail">Xem chi tiết</p>
-                </div>
-
-                <div class="treament">
-                    <div>
-                        <div id="treament-date">
-                            Ngày ghi nhận: <span>26/5/2023</span>
-                        </div>
-                        <div id="treament-symptom">
-                            Triệu chứng: <span>.....</span>
-                        </div>
-                        <div id="treament-diagnose">
-                            Chẩn đoán: <span>.....</span>
-                        </div>
-                    </div>
-                    <div>
-                        <div id="treament-done">
-                            Đã điều trị: <span>.....</span>
-                        </div>
-                        <div id="treament-prescription">
-                            Đơn thuốc điều trị: <span>.....</span>
-                        </div>
-                    </div>
-                    <p class="treament-detail">Xem chi tiết</p>
-                </div>
-
-                <div class="treament">
-                    <div>
-                        <div id="treament-date">
-                            Ngày ghi nhận: <span>26/5/2023</span>
-                        </div>
-                        <div id="treament-symptom">
-                            Triệu chứng: <span>.....</span>
-                        </div>
-                        <div id="treament-diagnose">
-                            Chẩn đoán: <span>.....</span>
-                        </div>
-                    </div>
-                    <div>
-                        <div id="treament-done">
-                            Đã điều trị: <span>.....</span>
-                        </div>
-                        <div id="treament-prescription">
-                            Đơn thuốc điều trị: <span>.....</span>
-                        </div>
-                    </div>
-                    <p class="treament-detail">Xem chi tiết</p>
-                </div>
-
-                <div class="treament">
-                    <div>
-                        <div id="treament-date">
-                            Ngày ghi nhận: <span>26/5/2023</span>
-                        </div>
-                        <div id="treament-symptom">
-                            Triệu chứng: <span>.....</span>
-                        </div>
-                        <div id="treament-diagnose">
-                            Chẩn đoán: <span>.....</span>
-                        </div>
-                    </div>
-                    <div>
-                        <div id="treament-done">
-                            Đã điều trị: <span>.....</span>
-                        </div>
-                        <div id="treament-prescription">
-                            Đơn thuốc điều trị: <span>.....</span>
-                        </div>
-                    </div>
-                    <p class="treament-detail">Xem chi tiết</p>
-                </div>
-
-                <div class="treament">
-                    <div>
-                        <div id="treament-date">
-                            Ngày ghi nhận: <span>26/5/2023</span>
-                        </div>
-                        <div id="treament-symptom">
-                            Triệu chứng: <span>.....</span>
-                        </div>
-                        <div id="treament-diagnose">
-                            Chẩn đoán: <span>.....</span>
-                        </div>
-                    </div>
-                    <div>
-                        <div id="treament-done">
-                            Đã điều trị: <span>.....</span>
-                        </div>
-                        <div id="treament-prescription">
-                            Đơn thuốc điều trị: <span>.....</span>
-                        </div>
-                    </div>
-                    <p class="treament-detail">Xem chi tiết</p>
-                </div>
-
-                <div class="treament">
-                    <div>
-                        <div id="treament-date">
-                            Ngày ghi nhận: <span>26/5/2023</span>
-                        </div>
-                        <div id="treament-symptom">
-                            Triệu chứng: <span>.....</span>
-                        </div>
-                        <div id="treament-diagnose">
-                            Chẩn đoán: <span>.....</span>
-                        </div>
-                    </div>
-                    <div>
-                        <div id="treament-done">
-                            Đã điều trị: <span>.....</span>
-                        </div>
-                        <div id="treament-prescription">
-                            Đơn thuốc điều trị: <span>.....</span>
-                        </div>
-                    </div>
-                    <p class="treament-detail">Xem chi tiết</p>
-                </div>
-
-                <div class="treament">
-                    <div>
-                        <div id="treament-date">
-                            Ngày ghi nhận: <span>26/5/2023</span>
-                        </div>
-                        <div id="treament-symptom">
-                            Triệu chứng: <span>.....</span>
-                        </div>
-                        <div id="treament-diagnose">
-                            Chẩn đoán: <span>.....</span>
-                        </div>
-                    </div>
-                    <div>
-                        <div id="treament-done">
-                            Đã điều trị: <span>.....</span>
-                        </div>
-                        <div id="treament-prescription">
-                            Đơn thuốc điều trị: <span>.....</span>
-                        </div>
-                    </div>
-                    <p class="treament-detail">Xem chi tiết</p>
-                </div>
-
-            </div>
-            <div class="prescription-list">
-                <div class="prescription">
-                    <div>
-                        <div id="prescription-date">
-                            Ngày dùng thuốc: <span>26/5/2023</span>
-                        </div>
-                        <div id="prescription-time">
-                            Thời gian duy trì: <span>.....</span>
-                        </div>
-                        <div id="prescription-price">
-                            Chi phí: <span>.....</span>
-                        </div>
-                    </div>
-                    <div>
-                        <div id="prescription-object">
-                            Sử dụng cho: <span>.....</span>
-                        </div>
-                        <div id="prescription-treament">
-                            Chuyển đến lộ trình: <span>.....</span>
-                        </div>
-                    </div>
-                    <p class="prescription-detail">Xem chi tiết</p>
-                </div>
-
-                <div class="prescription">
-                    <div>
-                        <div id="prescription-date">
-                            Ngày dùng thuốc: <span>26/5/2023</span>
-                        </div>
-                        <div id="prescription-time">
-                            Thời gian duy trì: <span>.....</span>
-                        </div>
-                        <div id="prescription-price">
-                            Chi phí: <span>.....</span>
-                        </div>
-                    </div>
-                    <div>
-                        <div id="prescription-object">
-                            Sử dụng cho: <span>.....</span>
-                        </div>
-                        <div id="prescription-treament">
-                            Chuyển đến lộ trình: <span>.....</span>
-                        </div>
-                    </div>
-                    <p class="prescription-detail">Xem chi tiết</p>
-                </div>
-
-                <div class="prescription">
-                    <div>
-                        <div id="prescription-date">
-                            Ngày dùng thuốc: <span>26/5/2023</span>
-                        </div>
-                        <div id="prescription-time">
-                            Thời gian duy trì: <span>.....</span>
-                        </div>
-                        <div id="prescription-price">
-                            Chi phí: <span>.....</span>
-                        </div>
-                    </div>
-                    <div>
-                        <div id="prescription-object">
-                            Sử dụng cho: <span>.....</span>
-                        </div>
-                        <div id="prescription-treament">
-                            Chuyển đến lộ trình: <span>.....</span>
-                        </div>
-                    </div>
-                    <p class="prescription-detail">Xem chi tiết</p>
-                </div>
-
-                <div class="prescription">
-                    <div>
-                        <div id="prescription-date">
-                            Ngày dùng thuốc: <span>26/5/2023</span>
-                        </div>
-                        <div id="prescription-time">
-                            Thời gian duy trì: <span>.....</span>
-                        </div>
-                        <div id="prescription-price">
-                            Chi phí: <span>.....</span>
-                        </div>
-                    </div>
-                    <div>
-                        <div id="prescription-object">
-                            Sử dụng cho: <span>.....</span>
-                        </div>
-                        <div id="prescription-treament">
-                            Chuyển đến lộ trình: <span>.....</span>
-                        </div>
-                    </div>
-                    <p class="prescription-detail">Xem chi tiết</p>
-                </div>
-
-                <div class="prescription">
-                    <div>
-                        <div id="prescription-date">
-                            Ngày dùng thuốc: <span>26/5/2023</span>
-                        </div>
-                        <div id="prescription-time">
-                            Thời gian duy trì: <span>.....</span>
-                        </div>
-                        <div id="prescription-price">
-                            Chi phí: <span>.....</span>
-                        </div>
-                    </div>
-                    <div>
-                        <div id="prescription-object">
-                            Sử dụng cho: <span>.....</span>
-                        </div>
-                        <div id="prescription-treament">
-                            Chuyển đến lộ trình: <span>.....</span>
-                        </div>
-                    </div>
-                    <p class="prescription-detail">Xem chi tiết</p>
-                </div>
-
-                <div class="prescription">
-                    <div>
-                        <div id="prescription-date">
-                            Ngày dùng thuốc: <span>26/5/2023</span>
-                        </div>
-                        <div id="prescription-time">
-                            Thời gian duy trì: <span>.....</span>
-                        </div>
-                        <div id="prescription-price">
-                            Chi phí: <span>.....</span>
-                        </div>
-                    </div>
-                    <div>
-                        <div id="prescription-object">
-                            Sử dụng cho: <span>.....</span>
-                        </div>
-                        <div id="prescription-treament">
-                            Chuyển đến lộ trình: <span>.....</span>
-                        </div>
-                    </div>
-                    <p class="prescription-detail">Xem chi tiết</p>
-                </div>
-
-            </div>
+            <div class="treatment-list"></div>
+            <div class="prescription-list"></div>
         </div>
     </div>
 
