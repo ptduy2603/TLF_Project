@@ -59,5 +59,31 @@ for (let i = 0; i < readmoreBtns.length; i++) {
 
 
 // Login function
-var loginBtn = document.querySelector('#login-modal input[type=text]')
-console.log(loginBtn)
+var loginBtn = document.querySelector('#login-modal button[type=submit]');
+console.log(loginBtn);
+loginBtn.addEventListener('click', (event) => {
+    var phonenumInput = document.querySelector('#login-modal #phonenum-input')
+    var passwordInput = document.querySelector('#login-modal #password-input')
+
+
+    var url = `https://wda-2023-tlf.onrender.com/v1/auth/login`
+    var options = {
+        headers: {
+            "Content-Type": "application/json"
+        },
+        method: 'POST',
+        body: JSON.stringify({
+            "phone" : phonenumInput.value,
+            "password" : passwordInput.value
+        })
+    }
+    fetch(url, options)
+        .then(res => res.json())
+        .then(res => {
+            console.log(res['accessToken']);
+            document.cookie = 'accessToken=' + res['accessToken'];
+            window.location.href = './html/patient_logined_page.html';
+        })
+})
+
+console.log(window.location.origin)
