@@ -43,3 +43,24 @@ prescriptionSortOptions.forEach((option) => {
         prescriptionSortOptionBox.classList.remove('active');
     }
 })
+
+// Readmore
+var readmoreBtns = document.getElementsByClassName('myBtn');
+for (let i = 0; i < readmoreBtns.length; i++) {
+
+    readmoreBtns[i].addEventListener('click', (event) => {
+        var dots = event.target.parentElement.getElementsByClassName('dots')[0];
+        var moreText = event.target.parentElement.getElementsByClassName('more')[0];
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            event.target.innerHTML = "Xem thêm";
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            event.target.innerHTML = "Thu gọn";
+            moreText.style.display = "inline";
+        }
+    })
+}
+

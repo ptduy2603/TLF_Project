@@ -163,7 +163,9 @@
 }
 
 /* content CSS */
-#content {}
+#content {
+    margin-top: 60px;
+}
 
 #patient-section {
     display: flex;
@@ -407,4 +409,58 @@
 .treatment-list.active,
 .prescription-list.active {
     display: block;
+}
+
+#content-surgery-card {
+    background-color: #ecf0fe;
+    border-radius: 2px;
+    padding: 8px;
+    width: 100%;
+}
+
+#content-surgery-card > img {
+    width: 45%;
+    height: 200px;
+}
+
+#content-surgery-text > h2 {
+    text-align: center;
+}
+
+/* Doctor */
+.doctor-list.row
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -4px;
+    padding: 0;
+}
+
+.doctor-item {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 2px rgba(0,0,0,0.2);
+    transition: all linear 0.2s;
+}
+
+.doctor-item:hover {
+    box-shadow: 0 4px 4px rgba(0,0,0,0.3);
+    opacity: 1;
+    transform: none;
+}
+
+.doctor-item:hover > img {
+    transform: scale(1.05);
+}
+
+/* instruction */
+.more {
+    display: none;
+}
+
+#content-instruction {
+    background-color: #ecf0fe;
+    padding: 8px;
+    border-radius: 2px;
 }
