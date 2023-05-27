@@ -1,0 +1,96 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --primary-color-1: #406AF9;
+}
+
+.btn{
+    color: #fff;
+    background-color: var(--primary-color-1);
+    min-width: 100px;
+    border-radius: 22px;    
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 22px;
+    border: none;
+    outline: none;
+    transition: all ease-in 0.2s;
+}
+
+.btn:active {
+    transform: scale(0.8);
+}
+
+.btn:hover {
+    color: var(--primary-color-1);
+    background-color: #fff;
+}
+
+/* Section in main content */
+.section {
+    width: 100%;
+    padding: 8px;
+    background-color: #fff;
+}
+
+.section__heading {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+/* modal CSS */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    animation: FadeIn ease-in 0.3s forwards;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal__content {
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #fff;
+    overflow: auto;
+    width: 80%;
+}
+
+.modal__heading {
+    margin: 0;
+}
+
+/* Animation */
+@keyframes FadeIn {
+    from {
+        display: none;
+        opacity: 0;
+    }
+    to {
+        display: block;
+        opacity: 1;
+    }
+}

@@ -1,3 +1,4 @@
+
 html,
 body {
     margin: 0;
@@ -44,22 +45,16 @@ body {
 #header-signup-btn,
 #header-chat-btn {
     float: right;
-    border-radius: 22px;
-    border: none;
-    outline: none;
-    margin-left: 10px;
-    margin-right: 10px;
-    background-color: var(--primary-color-1);
-    color: #fff;
+    margin: 0 10px;
     font-size: 13px;
-    padding: 10px 20px;
-    font-weight: bold;
 }
 
 #header-login-btn:hover,
 #header-signup-btn:hover,
 #header-chat-btn:hover {
     cursor: pointer;
+    background-color:#fff;
+    transition: all ease-in 0.2s;
     background-color: #fff;
     color: var(--primary-color-1);
 }
@@ -467,6 +462,11 @@ body {
     border-radius: 8px;
 }
 
+/* Footer */
+#footer {
+    height: 100px;
+    background-color: aqua;
+  
 /* Center the image and position the close button */
 #login-modal .imgcontainer {
     text-align: center;

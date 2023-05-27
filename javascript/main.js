@@ -1,3 +1,4 @@
+
 var emailinput = document.querySelectorAll('#login-modal input[type=text]')
 console.log('email input: ', emailinput)
 
@@ -85,5 +86,3 @@ loginBtn.addEventListener('click', (event) => {
             window.location.href = './html/patient_logined_page.html';
         })
 })
-
-console.log(window.location.origin)

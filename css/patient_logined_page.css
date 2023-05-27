@@ -1,0 +1,404 @@
+/* header CSS */
+
+#header {
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__title {
+    display: inline;
+    margin: 0;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.header__left-section, .header__right-section {
+    display: flex;
+    align-items: center;
+}
+
+#header-chat-btn {
+    margin: 30px;
+    padding: 6px 16px;
+}
+
+.header__icon {
+    font-size: 18px;
+}
+
+.header__right-section {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Header Notify */
+.header__notification {
+    margin-right: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+#notification-box {
+    position: absolute;
+    cursor: default;
+    top: calc(100% + 8px);
+    right: 0;
+    background-color: #fff;
+    margin: 0;
+    padding: 8px 0;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    min-width: 220px;
+    display: none;
+    animation: FadeIn ease-in 0.2s forwards;
+}
+
+#notification-box::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    background-color: transparent;
+    right: 0;
+    width: 115px;
+    height: 10px;
+}
+
+#notification-box::after {
+    content: "";
+    position: absolute;
+    border: solid 10px;
+    border-color: transparent transparent #fff transparent;
+    top: -18px;
+    right: 20px;
+}
+
+.header__notification:hover #notification-box {
+    display: block;
+    z-index: 1;
+}
+
+.notification-item {
+    width: 100%;
+    padding: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+.notification-item:hover {
+    background-color: rgba(0,0,0,0.02);
+}
+
+.header__user {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+    position: relative;
+}
+
+.header__user-avatar {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    object-fit: contain;
+    object-position: center;
+    margin-right: 8px;
+}
+
+.header__user-box {
+    position: absolute;
+    background-color: #fff;
+    top: 100%;
+    padding: 8px;
+    margin: 0;
+    border-radius: 2px;
+    display: none;
+    animation: FadeIn ease-in 0.2s forwards;
+}
+
+.header__user-item {
+    width: 100%;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px 0;
+}
+
+.header__user-item a {
+    color: var(--primary-color-1);
+}
+
+.header__user-item:last-child {
+    border-top: 1px solid #ccc;
+}
+
+.header__user-item:hover {
+    background-color: rgba(0,0,0,0.03);
+    transition: all ease-in 0.2s;
+}
+
+.header__user:hover .header__user-box{
+    display: block;
+    z-index: 1;
+}
+
+.header__notification:hover , .header__user:hover {
+    color: var(--primary-color-1);
+}
+
+/* navbar CSS */
+#contact {
+    text-align: center;
+}
+
+.contact__phone {
+    margin-top: 10px;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    width: 100%;
+    font-weight: bolder;
+}
+
+/* content CSS */
+#content {
+    
+}
+
+#patient-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+#patient-section > div {
+    width: 50%;
+    height: fit-content;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+#patient-info , #food {
+    background-color: #ecf0fe;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.3);
+}
+
+#patient-info {
+    margin-right: 4px;
+    display: flex;
+    align-items: center;
+}
+
+#patient-avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 2px;
+    margin-right: 20px;
+    object-fit: contain;
+    object-position: center;
+}
+
+#food {
+    margin-left: 4px;
+    display: flex;
+    min-height: 160px;
+    justify-content: space-around;
+}
+
+#food > ul li {
+    list-style: inside;
+    font-weight: 500;
+}
+
+#banner {
+    height: 160px;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Treament section */
+#treament-contain, #prescription-contain {
+    background-color: #ecf0fe;
+    border-radius: 2px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.treament , .prescription{
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 2px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    line-height: 2;
+    margin-bottom: 8px;
+}
+
+.treament-detail , .prescription-detail {
+    font-size: 12px;
+    font-weight: bolder;
+    margin: auto 0;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.treament-detail:hover, .prescription-detail:hover {
+    color: var(--primary-color-1);
+}
+
+/* filter CSS */
+#prescription-section-header, #prescription-filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#prescription-section-header {
+    margin-bottom: 8px;
+}
+
+#prescription-section-header .section__heading {
+    margin: 0;
+}
+
+#prescription-filter {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.prescription-search > div{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.prescription-search {
+    margin-right: 20px;
+}
+
+.prescription-search__input {
+    font-size: 16px;
+    outline: none;
+    padding: 4px;
+    height: 100%;
+    background-color: #ecf0fe;
+    border-radius: 2px;
+}
+
+.prescription-search__btn {
+    height: 100%;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 6px;
+    min-width: 50px;
+    cursor: pointer;
+}
+
+.prescription-search__btn:hover {
+    background-color: var(--primary-color-1);
+    color: #fff;
+}
+
+.prescription-sort {
+    height: 100%;
+    background-color: #ecf0fe;
+    padding: 6px;
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+.prescription-sort-option{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.prescription-sort-icon {
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.prescription-sort__box
+{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background-color: #ecf0fe;
+    margin: 0;
+    left: 0;
+    padding: 0;
+    z-index: 1;
+    animation: FadeIn ease-in 0.2s forwards;
+    display: none;
+}
+
+.prescription-sort__box-item {
+    width: 100%;
+    padding: 8px;
+    font-size: 12px;
+}
+
+.prescription-sort__box-item.active {
+    color: var(--primary-color-1);
+}
+
+.prescription-sort__box-item:hover {
+    color: var(--primary-color-1);
+    background-color: rgba(0,0,0,0.02);
+}
+
+.prescription-sort:hover .prescription-sort__box {
+    display: block;
+}
+
+.view-more-btn {
+    text-align: center;
+    padding: 8px 10px;
+    cursor: pointer;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* modal customize */
+.modal__header {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.modal__close-icon {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal__close-icon:hover {
+    opacity: 0.8;
+}
+
+.treatment-list , .prescription-list {
+    padding: 16px 8px 8px;
+    border-radius: 2px;
+    width: 100%;
+    overflow: auto;
+    height: 500px;
+    background-color: #ecf0fe;
+    display: none;
+}
+
+.treatment-list.active , .prescription-list.active {
+    display: block;
+}
+
