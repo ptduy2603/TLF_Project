@@ -61,7 +61,7 @@ for (let i = 0; i < readmoreBtns.length; i++) {
 // Login function
 var loginBtn = document.querySelector('#login-modal button[type=submit]');
 console.log(loginBtn);
-loginBtn.addEventListener('click', (event) => {
+loginBtn.addEventListener('click', () => {
     var phonenumInput = document.querySelector('#login-modal #phonenum-input')
     var passwordInput = document.querySelector('#login-modal #password-input')
 
@@ -86,4 +86,31 @@ loginBtn.addEventListener('click', (event) => {
         })
 })
 
-console.log(window.location.origin)
+
+// Signup function
+var loginBtn = document.querySelector('#signup-modal button[type=submit]');
+console.log(signupBtn);
+signupBtn.addEventListener('click', () => {
+    var phonenumInput = document.querySelector('#signup-modal #phonenum-input')
+    var nameInput = document.querySelector('#signup-modal #name-input')
+    var phonenumInput = document.querySelector('#signup-modal #phonenum-input')
+    var repeatPasswordInput = document.querySelector('#signup-modal #repeat-password-input')
+
+
+    var url = `https://wda-2023-tlf.onrender.com/v1/auth/register`
+    var options = {
+        headers: {
+            "Content-Type": "application/json"
+        },
+        method: 'POST',
+        body: JSON.stringify({
+            "phone" : phonenumInput.value,
+            "password" : passwordInput.value
+        })
+    }
+    fetch(url, options)
+        .then(res => res.json())
+        .then(res => {
+            console.log(res['accessToken']);
+        })
+})
