@@ -1,3 +1,12 @@
+/* Create Records  CSS*/
+.header__create-record-btn
+{
+    padding: 6px 16px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+
 /* prescription CSS*/
 .prescription-container {
     background-color: #ecf0fe;
@@ -96,4 +105,73 @@
 
 .schedul-item span {
     font-weight: 500;
+}
+
+/* modal customize */
+.modal__prescription-header {
+    margin-bottom: 10px;
+}
+
+.modal__prescription {
+    display: none;
+}
+
+.modal__prescription.active {
+    display: block;
+    position: relative;
+}
+
+/* form modal CSS */
+.modal__form {
+    padding: 10px 200px;
+    height: 100vh;
+    display: none;
+}
+
+.modal__form.active {
+    display: block;
+}
+
+.form__group {
+    background-color: #ecf0fe;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.form__title {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 30px;
+    text-align: center;
+    color: var(--primary-color-1);
+
+}
+
+.form__input {
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.form__input > label {
+    font-weight: bold;
+    display: inline-block;
+     margin-bottom: 8px;
+}
+
+.form__input > input {
+    padding: 4px;
+    outline: none;
+    border-radius: 2px;
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid rgba(0,0,0,0.5);
+}
+
+.btn-section {
+    text-align: center;
+}
+
+.form__btn-close {
+    margin-right: 20px;
+    background-color: grey;
 }

@@ -11,8 +11,9 @@ const prescriptionList = $('.prescription-list');
 const modalHeadingElement = $('.modal__heading');
 const prescriptionSortOptionBox = $('prescription-sort__box')
 const prescriptionSortOptions = $$('.prescription-sort__box-item');
-const prescriptionSortLable = $('.prescription-sort-option');
+const prescriptionSortLabel = $('.prescription-sort-option');
 const phoneNumberElement = $('.contact__phone-number');
+
 
 // declare variables
 var isRedPhoneNum = true;
